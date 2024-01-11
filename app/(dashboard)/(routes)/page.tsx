@@ -1,7 +1,7 @@
 "use client"
 
 import React from 'react';
-import {Card, CardContent, CardHeader, CardTitle} from "@components/ui/card";
+import {Card, CardContent, CardFooter, CardHeader, CardTitle} from "@components/ui/card";
 import {IoIosTimer} from "react-icons/io";
 import {FaArrowTrendDown, FaArrowTrendUp} from "react-icons/fa6";
 import {IoCheckmarkDone, IoStorefrontOutline} from "react-icons/io5";
@@ -13,7 +13,7 @@ import DummyBarChart from "@app/(dashboard)/_components/DummyBarChart";
 
 const Page = () => {
     return (
-        <div className="p-4 dark:bg-background bg-slate-50 w-full min-h-full">
+        <div className="p-4 dark:bg-background bg-slate-50 w-full min-h-full gap-4">
             <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-4 mb-4">
                 <Card className="w-full h-full p-4 items-center flex justify-center">
                     <div className="w-full h-full flex gap-2">
@@ -102,12 +102,12 @@ const Page = () => {
                 </Card>
             </div>
             {/*Graph Section*/}
-            <div className="mb-4 auto-cols-max grid-flow-row-dense grid gap-4 md:grid-cols-1 lg:grid-cols-3 grid-cols-1">
-                <Card className="col-span-2">
+            <div className="mb-4 gap-4 grid md:grid-cols-1 lg:grid-cols-3 grid-cols-1">
+                <Card className="lg:col-span-2 col-span-1">
                     <CardHeader>
                         <CardTitle>
                             <div className="w-full flex justify-between">
-                                <p className="font-bold text-lg w-3/4">User Inflow Statistics</p>
+                                <p className="font-bold text-lg w-3/4 whitespace-nowrap">User Inflow Statistics</p>
                                 <div className="flex justify-end gap-4">
                                     <div className="flex gap-2 items-start">
                                         <p className="w-2 h-2 rounded-full bg-indigo-500" />
@@ -132,8 +132,14 @@ const Page = () => {
                     </CardContent>
                 </Card>
 
-                <Card className="col-span-1 bg-[#990d81] text-white w-full h-full p-4 items-center flex justify-center m-0">
-                    <DummyBarChart data={barData} />
+                <Card className="col-span-1 bg-[#990d81] text-white items-center flex flex-col w-full h-full justify-between">
+                    <div className="flex h-3/4 w-full">
+                        <DummyBarChart data={barData} />
+                    </div>
+                    <CardFooter className="flex flex-col m-0 items-start w-full">
+                        <p className="font-bold text-lg">New Users</p>
+                        <p className="text-sm">(+23%) than last week</p>
+                    </CardFooter>
                 </Card>
             </div>
             {/*Tables*/}

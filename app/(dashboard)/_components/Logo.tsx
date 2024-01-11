@@ -1,4 +1,6 @@
 import React from 'react';
+import Image from "next/image";
+import wema from "@public/wema.png";
 
 type LogoProps = {
     width?: number;
@@ -8,7 +10,7 @@ type LogoProps = {
 const Logo = ({width=130, height=130}: LogoProps) => {
     return (
         <div style={{width: `${width}px`, height: `${height}px`, overflow: 'hidden'}}>
-            <img src="wema.png" alt="description" className="text-white filter invert grayscale" />
+            <Image width={width} height={height} src={wema} alt="logo" quality={100} className="text-white filter invert grayscale" />
         </div>
     );
 };

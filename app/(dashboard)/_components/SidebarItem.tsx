@@ -3,6 +3,7 @@ import {usePathname, useRouter} from "next/navigation";
 import {cn} from "@lib/utils";
 import {motion} from "framer-motion";
 import { IoIosArrowDown } from "react-icons/io";
+import React from "react";
 
 type SidebarItemProps = {
     icon: React.ForwardRefExoticComponent<Omit<React.SVGProps<SVGSVGElement>, "ref"> & React.RefAttributes<SVGSVGElement>>
@@ -41,7 +42,7 @@ const SidebarItem = ({icon: Icon, label, href, subCategory, ...props}: SidebarIt
                 transition={{duration: 0.3}}
                 onClick={handleClick}
                 type={"button"}
-                className={cn("flex rounded-lg items-center text-white/75 text-[12px] pl-6 transition-all w-full hover:dark:text-white/90 hover:text-white/85 hover:bg-white/5", isActive && "text-white dark:text-white hover:bg-white/10 bg-white/10")}
+                className={cn("flex rounded-lg items-center text-white/75 text-[13px] pl-6 transition-all w-full hover:dark:text-white/90 hover:text-white/85 hover:bg-white/5", isActive && "text-white dark:text-white hover:bg-white/10 bg-white/10")}
             >
                 <motion.div
                     transition={{duration: 0.3}}
