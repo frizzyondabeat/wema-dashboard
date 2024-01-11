@@ -65,13 +65,13 @@ const Sidebar = () => {
             <div className="flex justify-center items-center mx-3 h-[1px] my-2 bg-white/30"/>
             <div className="flex justify-end mx-3 rounded-lg bg-white/20 gap-3 p-3 mb-2">
                 <Avatar>
-                    <AvatarFallback className="text-wema-purple">
+                    <AvatarFallback className="text-wema-purple bg-white/50">
                         EO
                     </AvatarFallback>
                 </Avatar>
                 <div className="flex flex-col w-full text-white">
                     <p className="text-sm font-bold">Efeoghene Omonigho</p>
-                    <p className="text-xs text-white/30">Frontend Engineer</p>
+                    <p className="text-xs text-white/35">Frontend Engineer</p>
                 </div>
             </div>
         </div>

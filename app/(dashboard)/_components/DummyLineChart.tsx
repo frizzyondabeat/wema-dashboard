@@ -1,3 +1,5 @@
+"use client"
+
 // install (please try to align the version of installed @nivo packages)
 // yarn add @nivo/line
 import { ResponsiveLine } from '@nivo/line'

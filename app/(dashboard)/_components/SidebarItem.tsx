@@ -41,7 +41,7 @@ const SidebarItem = ({icon: Icon, label, href, subCategory, ...props}: SidebarIt
                 transition={{duration: 0.3}}
                 onClick={handleClick}
                 type={"button"}
-                className={cn("flex rounded-lg items-center text-white/75 text-[12px] pl-6 transition-all w-full hover:dark:text-primary-foreground/90 hover:text-white/85 hover:bg-white/5", isActive && "text-white dark:text-primary-foreground hover:bg-white/10 bg-white/10 hover:dark:text-primary-foreground")}
+                className={cn("flex rounded-lg items-center text-white/75 text-[12px] pl-6 transition-all w-full hover:dark:text-white/90 hover:text-white/85 hover:bg-white/5", isActive && "text-white dark:text-white hover:bg-white/10 bg-white/10")}
             >
                 <motion.div
                     transition={{duration: 0.3}}
@@ -49,7 +49,7 @@ const SidebarItem = ({icon: Icon, label, href, subCategory, ...props}: SidebarIt
                     className="flex w-full justify-start items-center gap-x-4 py-4">
                     <Icon
                         fontSize={22}
-                        className={cn("text-white/75", isActive && "dark:text-primary-foreground text-white")}/>
+                        className={cn("text-white/75", isActive && "dark:text-white text-white")}/>
                     {label}
                     {
                         label === "Audit Trail" &&

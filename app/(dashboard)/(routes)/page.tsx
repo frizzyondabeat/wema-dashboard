@@ -13,12 +13,9 @@ import DummyBarChart from "@app/(dashboard)/_components/DummyBarChart";
 
 const Page = () => {
     return (
-        <div className="p-4 dark:bg-background bg-slate-50 min-h-full gap-4">
+        <div className="p-4 dark:bg-background bg-slate-50 w-full min-h-full gap-4">
             <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-4 mb-4">
                 <Card className="w-full h-full p-4 items-center flex justify-center">
-                    {/*<CardContent>*/}
-                    {/*    */}
-                    {/*</CardContent>*/}
                     <div className="w-full h-full flex gap-2">
                         <p className="rounded-full w-10 h-10 p-2 bg-indigo-50 flex items-start justify-start">
                             <IoIosTimer className="text-2xl font-bold text-indigo-700"/>
@@ -27,12 +24,12 @@ const Page = () => {
                             className="flex flex-col w-full">
                             <p className="font-bold">1478,286</p>
                             <p className="text-xs text-muted-foreground">Pending Requests</p>
-                            <div className="flex items-center text-xs gap-2 mt-3">
+                            <div className="flex items-center text-[11px] gap-2 mt-3">
                                 <p className="flex gap-1 items-center text-green-500">
                                     <FaArrowTrendUp className="text-xs text-green-500"/>
                                     4.07%
                                 </p>
-                                <p className="whitespace-nowrap">Last month</p>
+                                <p className="whitespace-nowrap text-muted-foreground ">Last month</p>
                             </div>
                         </div>
                     </div>
@@ -49,12 +46,12 @@ const Page = () => {
                             className="flex flex-col w-full">
                             <p className="font-bold">1478,286</p>
                             <p className="text-xs text-muted-foreground">Approved Requests</p>
-                            <div className="flex items-center text-xs gap-2 mt-3">
+                            <div className="flex items-center text-[11px] gap-2 mt-3">
                                 <p className="flex gap-1 items-center text-green-500">
                                     <FaArrowTrendUp className="text-xs text-green-500"/>
                                     0.24%
                                 </p>
-                                <p className="whitespace-nowrap">Last month</p>
+                                <p className="whitespace-nowrap text-muted-foreground">Last month</p>
                             </div>
                         </div>
                     </div>
@@ -71,12 +68,12 @@ const Page = () => {
                             className="flex flex-col w-full">
                             <p className="font-bold">154,872</p>
                             <p className="text-xs text-muted-foreground">Total Agents</p>
-                            <div className="flex items-center text-xs gap-2 mt-3">
+                            <div className="flex items-center text-[11px] gap-2 mt-3">
                                 <p className="flex gap-1 items-center text-red-500">
                                     <FaArrowTrendDown className="text-xs text-red-500"/>
                                     4.07%
                                 </p>
-                                <p className="whitespace-nowrap">Last month</p>
+                                <p className="whitespace-nowrap text-muted-foreground">Last month</p>
                             </div>
                         </div>
                     </div>
@@ -93,12 +90,12 @@ const Page = () => {
                             className="flex flex-col w-full">
                             <p className="font-bold">167</p>
                             <p className="text-xs text-muted-foreground">Total Users</p>
-                            <div className="flex items-center text-xs gap-2 mt-3">
+                            <div className="flex items-center text-[11px] gap-2 mt-3">
                                 <p className="flex gap-1 items-center text-yellow-500">
                                     <FaArrowTrendUp className="text-xs text-yellow-500"/>
                                     0.00%
                                 </p>
-                                <p className="whitespace-nowrap">Last month</p>
+                                <p className="whitespace-nowrap text-muted-foreground">Last month</p>
                             </div>
                         </div>
                     </div>
@@ -134,7 +131,7 @@ const Page = () => {
                     </CardContent>
                 </Card>
 
-                <Card className="bg-[#990d81] text-white w-full h-full p-4 items-center flex justify-center">
+                <Card className=" bg-[#990d81] text-white w-full h-full p-4 items-center flex justify-center">
                     <DummyBarChart data={barData} />
                 </Card>
             </div>
