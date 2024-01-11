@@ -31,7 +31,7 @@ const NavbarRoutes = () => {
                     <Input placeholder="Enter keywords" className="px-10 border-0 bg-slate-50 dark:bg-slate-50/5" />
                     <Search size={18} className="text-slate-500 absolute left-3" />
                 </div>
-                <Button variant="ghost" className="flex relative">
+                <Button variant="ghost" className="md:flex lg:flex relative hidden">
                     EN
                     <IoIosArrowDown className="h-[1.2rem] w-[1.2rem]"/>
                 </Button>

@@ -13,7 +13,7 @@ import DummyBarChart from "@app/(dashboard)/_components/DummyBarChart";
 
 const Page = () => {
     return (
-        <div className="p-4 dark:bg-background bg-slate-50 w-full min-h-full gap-4">
+        <div className="p-4 dark:bg-background bg-slate-50 w-full min-h-full">
             <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-4 mb-4">
                 <Card className="w-full h-full p-4 items-center flex justify-center">
                     <div className="w-full h-full flex gap-2">
@@ -101,7 +101,8 @@ const Page = () => {
                     </div>
                 </Card>
             </div>
-            <div className="mb-4 grid gap-4 md:grid-cols-1 lg:grid-cols-3 grid-cols-1">
+            {/*Graph Section*/}
+            <div className="mb-4 auto-cols-max grid-flow-row-dense grid gap-4 md:grid-cols-1 lg:grid-cols-3 grid-cols-1">
                 <Card className="col-span-2">
                     <CardHeader>
                         <CardTitle>
@@ -131,10 +132,11 @@ const Page = () => {
                     </CardContent>
                 </Card>
 
-                <Card className=" bg-[#990d81] text-white w-full h-full p-4 items-center flex justify-center">
+                <Card className="col-span-1 bg-[#990d81] text-white w-full h-full p-4 items-center flex justify-center m-0">
                     <DummyBarChart data={barData} />
                 </Card>
             </div>
+            {/*Tables*/}
             <Card className="">
                 <UsersTable />
             </Card>
