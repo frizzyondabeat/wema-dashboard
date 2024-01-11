@@ -25,7 +25,7 @@ const Page = () => {
                         </p>
                         <div
                             className="flex flex-col w-full">
-                            <p>1478,286</p>
+                            <p className="font-bold">1478,286</p>
                             <p className="text-xs text-muted-foreground">Pending Requests</p>
                             <div className="flex items-center text-xs gap-2 mt-3">
                                 <p className="flex gap-1 items-center text-green-500">
@@ -47,7 +47,7 @@ const Page = () => {
                         </p>
                         <div
                             className="flex flex-col w-full">
-                            <p>1478,286</p>
+                            <p className="font-bold">1478,286</p>
                             <p className="text-xs text-muted-foreground">Approved Requests</p>
                             <div className="flex items-center text-xs gap-2 mt-3">
                                 <p className="flex gap-1 items-center text-green-500">
@@ -69,7 +69,7 @@ const Page = () => {
                         </p>
                         <div
                             className="flex flex-col w-full">
-                            <p>154,872</p>
+                            <p className="font-bold">154,872</p>
                             <p className="text-xs text-muted-foreground">Total Agents</p>
                             <div className="flex items-center text-xs gap-2 mt-3">
                                 <p className="flex gap-1 items-center text-red-500">
@@ -91,7 +91,7 @@ const Page = () => {
                         </p>
                         <div
                             className="flex flex-col w-full">
-                            <p>167</p>
+                            <p className="font-bold">167</p>
                             <p className="text-xs text-muted-foreground">Total Users</p>
                             <div className="flex items-center text-xs gap-2 mt-3">
                                 <p className="flex gap-1 items-center text-yellow-500">

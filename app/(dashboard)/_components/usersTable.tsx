@@ -91,7 +91,7 @@ export function UsersTable() {
                                 </AvatarFallback>
                             </Avatar>
                             <div className="flex flex-col">
-                                <p className="text-sm leading-none">{user.name.name}</p>
+                                <p className="text-sm leading-none font-bold">{user.name.name}</p>
                                 <p className="text-xs leading-none text-muted-foreground">
                                     {user.name.email}
                                 </p>
