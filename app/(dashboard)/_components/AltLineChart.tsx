@@ -77,7 +77,22 @@ const AltLineChart = () => {
                     tickLine={false}
                     axisLine={false}
                 />
-                <Tooltip/>
+                <Tooltip
+                    itemStyle={{
+                        fontSize: '13px',
+                        fill: `${resolvedTheme === "dark" ? '#fff' : '#000'}`,
+                        fontFamily: "Roboto",
+                    }}
+                    contentStyle={{
+                        backgroundColor: `${resolvedTheme === "dark" ? '#1e1e1e' : '#fff'}`,
+                        border: "none",
+                        borderRadius: "5px",
+                        boxShadow: "0 0 10px rgba(0,0,0,0.1)"
+                    }}
+                    labelStyle={{
+                        fontWeight: "bold",
+                    }}
+                />
                 <Legend
                     wrapperStyle={{
                         paddingTop: "1rem",

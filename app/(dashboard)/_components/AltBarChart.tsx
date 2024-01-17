@@ -1,5 +1,6 @@
 import React from 'react';
 import {Bar, BarChart, CartesianGrid, Rectangle, ResponsiveContainer, Tooltip, XAxis, YAxis} from 'recharts';
+import {useTheme} from "next-themes";
 
 const data = [
     {
@@ -26,6 +27,8 @@ const data = [
 ];
 
 const AltBarChart = () => {
+
+    const {resolvedTheme} = useTheme()
     return (
         <ResponsiveContainer width="100%" height="100%">
             <BarChart
@@ -58,7 +61,24 @@ const AltBarChart = () => {
                     tickLine={false}
                     axisLine={false}
                 />
-                <Tooltip/>
+                <Tooltip
+                    itemStyle={{
+                        fontSize: '13px',
+                        fill: `${resolvedTheme === "dark" ? '#fff' : '#000'}`,
+                        fontFamily: "Roboto",
+                        color: `orange`,
+                    }}
+                    contentStyle={{
+                        backgroundColor: `${resolvedTheme === "dark" ? '#1e1e1e' : '#fff'}`,
+                        border: "none",
+                        borderRadius: "5px",
+                        boxShadow: "0 0 10px rgba(0,0,0,0.1)",
+                        color: `${resolvedTheme === "dark" ? '#fff' : '#000'}`,
+                    }}
+                    labelStyle={{
+                        fontWeight: "bold",
+                    }}
+                />
                 <Bar dataKey="users" fill="#fff" activeBar={<Rectangle fill="orange" stroke="blue"/>} radius={
                     [10, 10, 0, 0]
                 }/>
