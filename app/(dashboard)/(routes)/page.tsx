@@ -7,9 +7,8 @@ import {FaArrowTrendDown, FaArrowTrendUp} from "react-icons/fa6";
 import {IoCheckmarkDone, IoStorefrontOutline} from "react-icons/io5";
 import {UsersTriple} from "react-huge-icons/bulk"
 import {UsersTable} from "@app/(dashboard)/_components/usersTable";
-import DummyLineChart from "@app/(dashboard)/_components/DummyLineChart";
-import {data, barData} from "@app/(dashboard)/_components/dummyData";
-import DummyBarChart from "@app/(dashboard)/_components/DummyBarChart";
+import AltLineChart from "@app/(dashboard)/_components/AltLineChart";
+import AltBarChart from "@app/(dashboard)/_components/AltBarChart";
 
 const Page = () => {
     return (
@@ -128,13 +127,14 @@ const Page = () => {
                         </CardTitle>
                     </CardHeader>
                     <CardContent className="w-full h-[80%]">
-                        <DummyLineChart data={data} />
+                        <AltLineChart />
                     </CardContent>
                 </Card>
 
                 <Card className="col-span-1 bg-[#990d81] text-white items-center flex flex-col w-full h-full justify-between">
-                    <div className="flex h-3/4 w-full">
-                        <DummyBarChart data={barData} />
+                    <CardHeader />
+                    <div className="flex h-full w-full">
+                        <AltBarChart />
                     </div>
                     <CardFooter className="flex flex-col m-0 items-start w-full">
                         <p className="font-bold text-lg">New Users</p>
@@ -146,6 +146,7 @@ const Page = () => {
             <Card className="">
                 <UsersTable />
             </Card>
+            {/*<Header />*/}
         </div>
     );
 };

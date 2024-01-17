@@ -1,6 +1,5 @@
 import React from 'react';
 import {Bar, BarChart, CartesianGrid, Rectangle, ResponsiveContainer, Tooltip, XAxis, YAxis} from 'recharts';
-import {useTheme} from "next-themes";
 
 const data = [
     {
@@ -27,9 +26,6 @@ const data = [
 ];
 
 const AltBarChart = () => {
-
-    const {resolvedTheme} = useTheme()
-
     return (
         <ResponsiveContainer width="100%" height="100%">
             <BarChart
